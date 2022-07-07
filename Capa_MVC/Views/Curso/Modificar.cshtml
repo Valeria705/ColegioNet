@@ -1,0 +1,27 @@
+﻿
+
+@{
+    ViewBag.Menu = "Curso";
+}
+
+@using Capa_Entidad
+@model CE_Curso
+<h2>Modificar</h2>
+
+<form action="/Curso/ModificarFormlario">
+
+
+    <div class="input-group input-group-sm mb-3">
+        <span class="input-group-text" id="inputGroup-sizing-sm">Id</span>
+        <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" name="Id_Curso" value="@Model.Id_Curso">
+    </div>
+
+    <div class="input-group input-group-sm mb-3">
+        <span class="input-group-text" id="inputGroup-sizing-sm">Nombre</span>
+        <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" name="Nom_Curso" value="@Model.Nom_Curso">
+    </div>
+
+    <br /> <br />
+    <input type="submit" value="Guardar" class="btn btn-primary btn-sm" />
+
+</form>

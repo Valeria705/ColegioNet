@@ -1,0 +1,33 @@
+﻿@using Capa_Entidad
+@model List<CE_Especialidad>
+@{ 
+    ViewBag.Menu = "Especialidad";
+}
+
+<h2>Especialidades</h2>
+
+
+<table class="table">
+    <tr>
+        <th>Id</th>
+        <th>Nombre</th>
+        <th colspan="2">Opciones</th>
+    </tr>
+
+    @foreach (CE_Especialidad x in Model)
+    {
+        <tr>
+            <td>@x.Id_Especialidad</td>
+            <td>@x.Nom_Especialidad</td>
+
+            <td><a href="/Especialidad/Modificar?Id=@x.Id_Especialidad" class="btn btn-primary btn-xs">modificar</a></td>
+            <td><a href="/Especialidad/Eliminar?Id=@x.Id_Especialidad" class="btn btn-primary btn-xs">eliminar</a></td>
+        </tr>
+
+    }
+
+
+
+</table>
+
+<a href="/Especialidad/Insertar" class="btn btn-primary btn-sm">Agregar</a>

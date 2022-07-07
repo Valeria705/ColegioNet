@@ -1,0 +1,35 @@
+﻿@using Capa_Entidad
+@model List<CE_Curso>
+@{
+    ViewBag.Menu = "Curso";
+}
+
+<h2>Cursos</h2>
+
+
+<table class="table">
+    <tr>
+        <th>Id</th>
+        <th>Nombre</th>
+        <th colspan="2">Opciones</th>
+    </tr>
+
+    @foreach (CE_Curso x in Model)
+    {
+        <tr>
+            <td>@x.Id_Curso</td>
+            <td>@x.Nom_Curso</td>
+
+            <td><a href="/Curso/Modificar?Id=@x.Id_Curso" class="btn btn-primary btn-xs">modificar</a></td>
+            <td><a href="/Curso/Eliminar?Id=@x.Id_Curso" class="btn btn-primary btn-xs">eliminar</a></td>
+        </tr>
+
+    }
+
+
+
+</table>
+
+<a href="/Curso/Insertar" class="btn btn-primary btn-sm">Agregar</a>
+
+
